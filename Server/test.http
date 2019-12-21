@@ -1,0 +1,58 @@
+@url = http://localhost:3001
+@json = Content-type: application/json
+
+
+### get/
+get {{url}}
+{{json}}
+
+{
+    "Test":true
+}
+
+### getAllUser
+get {{url}}/getAllUser
+
+### login
+post {{url}}/login
+{{json}}
+
+{
+    "uid": "1",
+    "password": "123456"
+}
+### register
+post {{url}}/register
+{{json}}
+
+{
+    "Name":"Tom",
+    "password":"password1",
+    "Sex":"Male",
+    "Type":"Manager",
+    "phoneNum":"110",
+    "HotelID":1
+}
+
+### getRoom
+post {{url}}/getVacantRoom
+{{json}}
+
+{
+    "roomTypeID": 1,
+    "checkInTime": "2019-12-04",
+    "checkOutTime": "2019-12-05"
+}
+
+### Add Room
+post {{url}}/addRoom
+{{json}}
+
+{
+    "roomTypeID": 1,
+    "HouseNum": {"layer": 1, "number": "07"}
+}
+
+### place order
+get {{url}}/getEmployeeInfo/Reception
+
