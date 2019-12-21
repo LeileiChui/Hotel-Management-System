@@ -107,3 +107,4 @@ dist
 .DS_Store
 .gitignore
 .idea
+package-lock.json
